@@ -197,6 +197,8 @@ a {
     left: 0;
     z-index: 1;
     transition: opacity 0.2s linear;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .country__item:hover {
@@ -204,9 +206,9 @@ a {
 }
 
 .country__item:hover .country__img {
-    box-shadow: -2px 1px 8px 6px #979494;
-    /* transform: translate(-3px, -3px); */
+    /* box-shadow: -2px 1px 8px 6px #979494; */
     opacity: 1;
+    transform: scale(1.1);
 }
 
 .country__item:last-child {
@@ -215,10 +217,11 @@ a {
 
 .country__img {
     display: block;
-    border-radius: 20px;
-    opacity: 0.7;
-    transition: transform 0.4s linear;
-    transition: opacity 0.4s linear;
+    
+    opacity: 93%;
+    
+    transition: all 0.4s linear;
+    /* transition: opacity 0.4s linear; */
 }
 
 .country__item__title {
@@ -255,11 +258,11 @@ a {
     color: #fff;
     cursor: pointer;
     transition: background 0.17s linear;
-    background-color: #e84545;
+    background-color: #e42a2a;
 }
 
 .btn:hover {
-    background-color: #e42a2a;
+    background-color: #e84545;
 }
 
 /* articles */
@@ -293,6 +296,7 @@ a {
     justify-content: space-between;
     width: 100%;
     margin-top: 50px;
+    
 }
 
 
@@ -312,6 +316,7 @@ a {
 
 .articles__item:hover {
     opacity: 1;
+    
 }
 
 .articles__content__title {
@@ -346,12 +351,10 @@ a {
     position: relative;
     
     margin-top: 30px;
-    /* transition: background 0.2s linear; */
     transition: all 0.2s linear;
 }
 
 .articles__but:hover {
-    /* background-color: #969697; */
     background-color: #e42a2a;
     color: #fff;
     opacity: 0.9;
