@@ -54,44 +54,180 @@ a {
 
 .header {
     width: 100%;
-    height: 100px;
-    position: absolute;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
     top: 0;
-    left: 0;
     z-index: 3;
+    box-shadow: 0px -5px 8px 2px #979494;
 }
 
 .header__inner {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    padding: 35px 0;
+    align-items: center;
+    margin: 10px 100px;
+}
+
+.header__logo__content {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+
 .header__logo {
-    width: 90px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
 }
+
+.header__logo__title {
+    color: #000;
+    margin-left: 7px;
+    font-size: 25px;
+    text-transform: uppercase;
+    /* letter-spacing: 2px; */
+    /* font-family: 'Prata', serif; */
+}
+
+
+.header__search {
+    fill: #000;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* burger */
+
+.burger {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+
+.burger__item {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    font-size: 0;
+    color: transparent;
+    position: relative;
+}
+
+.burger__item::before, .burger__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-color: #000;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    transition: transform linear 0.2s;
+}
+
+.burger__item::before {
+    top: -8px;
+}
+
+.burger__item::after {
+   bottom: -8px;
+}
+
 
 /* nav */
 
 .nav {
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: #fff;
+    padding: 50px 25px;
+
+}
+
+.nav.active {
     display: flex;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
+}
+
+.nav__close__content {
+    background-color: #eee;
+    padding: 22px;
+    margin-top: 20px;
+    margin-right: 15px;
+    box-sizing: unset;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.nav__close__content:hover {
+    cursor: pointer;
+}
+
+.nav__close {
+    position: relative;
+    right: -10px;
+}
+
+.nav__close::after, .nav__close::before {
+    content: "";
+    background-color: #000;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    right: 0;
+    z-index: 201;
+}
+
+.nav__close::after {
+    transform: rotate(45deg);
+}
+
+.nav__close::before {
+    transform: rotate(-45deg);
 }
 
 .nav__link {
-    margin-left: 50px;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
     text-decoration: none;
-    opacity: 75%;
-    
+    margin: 10px 0;
+    opacity: 90%;
     transition: opacity .1s linear ;
 }
 
-.nav__caret {
+.nav__link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.nav__link__text {
+    margin-left: 10px;
+}
+
+.nav__icon {
+    width: 25px;
+    height: 25px;
+    fill: rgb(28, 30, 28);
+}
+
+/* .nav__caret {
     display: inline-block;
     width: 0;
     height: 0;
@@ -100,57 +236,10 @@ a {
     border-top: 4px dashed;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
-}
-
-.nav__link:hover {
-    opacity: 1;
-}
-
-.nav__link:first-child {
-    margin-left: 0;
-}
+} */
 
 /* intro */
 
-.intro { 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    height: 700px;
-    background: url(images/zamok__intro.jpg) center no-repeat;
-    background-size: cover;
-}
-
-.intro::after {
-    content: '';
-    display: block;
-    background: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-} 
-
-.intro__inner {
-    width: 100%;
-    max-width: 970px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.intro__title {
-    font-family: 'Open Sans' sans-serif;
-    text-transform: uppercase;
-    font-size: 65px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.1;
-    position: relative;
-    z-index: 2;
-}
 
 /* country */
 
@@ -190,7 +279,7 @@ a {
     display: flex;
     width: 22%;
     max-width: 300px;
-    max-height: 300px;
+    height: 300px;
     flex-wrap: wrap;
     position: relative;
     top: 0;
@@ -385,70 +474,40 @@ a {
 }
 
 .footer__img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .footer__logo__title {
     color: #fff;
     margin-left: 7px;
-    font-size: 30px;
-}
-
-.footer__content {
-    display: flex;
-    justify-content: space-between;
-    
-    flex-wrap: wrap;    
-}
-
-.footer__item {
-    width: 28%;
-}
-
-.footer__item__title {
-    color: #fff;
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
+    font-size: 25px;
     text-transform: uppercase;
+    /* letter-spacing: 2px; */
 }
 
-.footer__item__title::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #6b6b6b;
-    margin-top: 10px;
+.footer__list {
+    text-align: center;
 }
 
-.footer__item__content {
-    padding-top: 5px;
-    padding-left: 10px;
-}
-
-.footer__item__list {
-    color: #ccc;
-    display: block;
-    font-weight: 600;
-    margin-bottom: 20px;
-    list-style-type: none;
-    font-size: 20px;
-    transition: color .3s linear;
-}
-
-.footer__item__list:hover {
+.footer__text {
+    font-size: 14px;
     color: #fff;
+    font-weight: 500;
+    margin: 0 10px;
+    line-height: 25px;
+    white-space: nowrap;
+    opacity: 0.9;
+    transition: opacity 0.2s linear;
 }
 
-.footer__item__list__caret {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-right: 2px;
-    vertical-align: middle;
-    border-left: 4px dashed;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
+.footer__text:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer__paragraf {
+    text-align: center;
+    margin-top: 50px;
+    color: #d0d0d0;
 }
