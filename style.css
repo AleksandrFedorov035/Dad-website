@@ -307,8 +307,6 @@ a {
 
 .country {
     margin-top: 100px;
-    /* margin-left: 2%;
-    margin-right: 2%; */
 }
 
 .country__title {
@@ -338,8 +336,8 @@ a {
 
 .country__item {
     display: flex;
-    width: 19%;
-    max-width: 300px;
+    width: calc(100% / 5);
+    /* max-width: 300px; */
     flex-wrap: wrap;
     position: relative;
     top: 0;
