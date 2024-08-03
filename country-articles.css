@@ -68,7 +68,7 @@ a {
 .article__logo::after {
     content: "";
     display: block;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.05);
     position: absolute;
     top: 0;
     left: 0;
@@ -101,9 +101,9 @@ a {
     transform: translate3d(-50%, -50%, 0);
 }
 
-.article__tag {
+/* .article__tag {
     margin-left: 10px;
-}
+} */
 
 .article__subtitle {
     position: absolute;
