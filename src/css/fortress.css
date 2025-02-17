@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    color: #2d3033;
+    color: #999;
     background-color: #fff;
 
     -webkit-font-smoothing: antialiesed;
@@ -24,7 +24,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1500px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -53,7 +53,6 @@ a {
     margin: 0;
     color: inherit;
 }
-
 
 /* country */
 
@@ -87,8 +86,9 @@ a {
 }
 
 .country__item {
-    display: block;
+    display: flex;
     width: calc(100% / 5);
+    max-height: 235px;
     flex-wrap: wrap;
     position: relative;
     top: 0;
@@ -125,7 +125,6 @@ a {
 }
 
 .country__item:hover .country__img {
-    /* box-shadow: -2px 1px 8px 6px #979494; */
     opacity: 1;
     transform: scale(1.1);
 }
@@ -138,10 +137,17 @@ a {
     display: block;
     opacity: 93%;
     width: 400px;
-    height: 210px;
+    height: 235px;
     
     transition: all 0.4s linear;
-    /* transition: opacity 0.4s linear; */
+}
+
+.maxHeight {
+    height: auto;
+}
+
+.maxHeight2 {
+    max-height: none;
 }
 
 .country__item__title {

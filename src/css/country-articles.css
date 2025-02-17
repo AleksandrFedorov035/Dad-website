@@ -7,7 +7,7 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    color: #2d3033;
+    color: #999;
     background-color: #f7f7f7;
 
     -webkit-font-smoothing: antialiesed;
@@ -25,7 +25,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 30px;
 }
@@ -59,9 +59,9 @@ a {
 
 .article__logo {
     text-align: center;
-    width: 1240px;
-    height: 750px;
-    margin-top: 100px;
+    width: 100%;
+    height: 810px;
+    margin-top: 80px;
     position: relative;
     cursor: pointer;
 }
@@ -76,13 +76,13 @@ a {
     z-index: 2;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 25px;
     
 }
 
 .article__logo__img {
     display: block;
-    border-radius: 15px;
+    border-radius: 25px;
     
     width: 100%;
     height: 100%;
@@ -102,42 +102,24 @@ a {
     transform: translate3d(-50%, -50%, 0);
 }
 
-/* .article__tag {
-    display: flex;
-    width: 200px;
-    justify-content: space-between;
-}
-
-.article__subtitle {
-    top: 45%;
-    left: 50%;
-    z-index: 3;
-    color: #fff;
-    transform: translate3d(-50%, -50%, 0);
-    font-size: 15px;
-}  */
-
 .article__previews {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    max-width: 1240px;
+    max-width: 1500px;
     overflow: hidden;
     cursor: pointer;
 }
-
-
 
 .article__preview {
     width: 400px;
     height: 260px;
     margin: 23px 20px 30px 0;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .article__preview__slider {
     overflow: visible;
-
 }
 
 .article__preview__sliderLeft {
@@ -158,8 +140,6 @@ a {
     border: 50%;
 }
 
-
-
 /* header */
 
 .header {
@@ -177,9 +157,7 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* margin: 10px 50px; */
     margin-top: 10px;
-
 }
 
 .header__logo__content {
@@ -189,7 +167,6 @@ a {
     position: relative;
     left: -40px;
 }
-
 
 .header__logo {
     width: 40px;
@@ -201,8 +178,6 @@ a {
     margin-left: 7px;
     font-size: 25px;
     text-transform: uppercase;
-    /* letter-spacing: 2px; */
-    /* font-family: 'Prata', serif; */
     font-weight: 400;
 }
 
@@ -225,9 +200,7 @@ a {
     cursor: pointer;
     box-sizing: border-box;
     padding: 10px;
-
 }
-
 
 .burger__item {
     display: block;

@@ -7,8 +7,8 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
-    color: #2d3033;
-    background-color: #fff;
+    color: #999;
+    background-color: #f7f7f7;
 
     -webkit-font-smoothing: antialiesed;
     -webkit-touch-callout: none; /* iOS Safari */
@@ -25,7 +25,7 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1500px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -126,7 +126,7 @@ a {
 .burger__item {
     display: block;
     width: 25px;
-    height: 3px;
+    height: 2px;
     background-color: #000;
     font-size: 0;
     color: transparent;
@@ -255,11 +255,9 @@ a {
 /* intro */
 .intro {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
 
-    height: 700px;
+    max-height: 810px;
     width: 100%;
     margin-top: 80px;
 }
@@ -267,46 +265,44 @@ a {
 .intro::after {
     content: "";
     display: block;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.35);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
-}
-
-.intro__logo {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-}
-
-.active {
-    display: block;
+    border-radius: 25px;
 }
 
 .intro__inner {
-    z-index: 2;
+   display: flex;
+}
+
+.intro__logo {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 25px;
 }
 
 .intro__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate3d(-50%, -50%, 0);
     font-family: 'Open Sans' sans-serif;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 700;
     color: #fff;
-    text-align: center;
 }
 
 /* country */
 
 .country {
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .country__title {
@@ -386,12 +382,7 @@ a {
     height: 235px;
     opacity: 93%;
     transition: all 0.4s linear;
-    /* transition: opacity 0.4s linear; */
 }
-
-
-
-
 
 .country__item__title {
     font-family: "Prata", serif;
@@ -438,10 +429,8 @@ a {
 
 /* articles */
 
-.articles {
+/* .articles {
     margin-top: 100px;
-    /* margin-left: 2%;
-    margin-right: 2%; */
 }
 
 .articles__title {
@@ -538,7 +527,7 @@ a {
 .articles__but__img {
     width: 10px;
     height: 10px;
-}
+} */
 
 /* footer */
 
@@ -565,7 +554,6 @@ a {
     margin-left: 7px;
     font-size: 25px;
     text-transform: uppercase;
-    /* letter-spacing: 2px; */
 }
 
 .footer__list {
